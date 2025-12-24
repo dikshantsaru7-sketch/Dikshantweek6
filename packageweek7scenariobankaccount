@@ -1,0 +1,44 @@
+package week7workshop;
+
+
+/**
+ * Write a description of class bankaccount here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+public class bankaccount
+{
+    int num;
+    String name;
+    double balance;
+    
+    
+    public bankaccount(int num, String name, double balance)
+    {
+    this.num=num;
+    this.name=name;
+    this.balance=balance;
+    }
+    
+    
+     void deposit(double amount) {
+        balance = balance + amount;
+        System.out.println("Deposited: Rs. " + amount);
+    }
+
+    
+     void withdraw(double amount) {
+        if (amount <= balance) {
+            balance = balance - amount;
+            System.out.println("Withdrawn: Rs. " + amount);
+        }
+        else {
+            System.out.println("Insufficient balance!");
+        }
+    }
+    
+    void disbalance() {
+        System.out.println("Current Balance: Rs. " + balance);
+    }
+}
